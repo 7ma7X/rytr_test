@@ -28,7 +28,7 @@ workflows:
   schedule_workflow:
     triggers:
       - schedule:
-          cron: "0,30 * * * *" # 10分に1回
+          cron: "0,30 * * * *" # 30分に1回
           filters:
             branches:
               only:
