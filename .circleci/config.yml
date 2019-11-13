@@ -1,0 +1,30 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/rytr_test
+    docker:
+      - image: ubuntu
+    steps:
+      - checkout:
+      - run:
+          command: |
+            bash setup.sh
+            bash base_test.sh
+          no_output_timout: 1h
+      - store_artifacts:
+          path: ~/rytr_test/simulator/result.ppm
+workflows:
+  version: 2
+  normal_workflow:
+    jobs:
+      - build
+  schedule_workflow:
+    triggers:
+      - schedule:
+          cron: "*/10 * * * *" # 10分に1回
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - build

@@ -1,0 +1,1 @@
+./sim -t rytl.bin -dt contest.sld -ob result.ppm
