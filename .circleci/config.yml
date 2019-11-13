@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/rytr_test
     docker:
-      - image: circleci
+      - image: circleci/buildpack-deps
     steps:
       - checkout:
       - run:
