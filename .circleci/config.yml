@@ -7,6 +7,8 @@ jobs:
     steps:
       - checkout:
       - run:
+          environment:
+            TZ: Asia/Tokyo
           command: |
             bash setup.sh
             bash base_test.sh
@@ -23,7 +25,7 @@ workflows:
   schedule_workflow:
     triggers:
       - schedule:
-          cron: "*/10 * * * *" # 10分に1回
+          cron: "0,30 * * * *" # 10分に1回
           filters:
             branches:
               only:
