@@ -12,7 +12,9 @@ jobs:
             bash base_test.sh
           no_output_timout: 1h
       - store_artifacts:
-          path: ~/rytr_test/simulator/result.ppm
+          path: ~/rytr_test/simulator/base.ppm
+      - store_artifacts:
+          path: ~/rytr_test/simulator/contest.ppm
 workflows:
   version: 2
   normal_workflow:
