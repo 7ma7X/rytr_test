@@ -16,6 +16,6 @@ CircleCI を使って、定期的にレイトレプログラムをコンパイ�
 
 ![image](https://user-images.githubusercontent.com/36184621/68780290-6bf13200-0679-11ea-9f8f-c12d6913d1bf.png)
 
-また、「Artifacts」タブから、出力された PPM 画像をダウンロードすることもできます。
+また、「Artifacts」タブから、出力された PPM 画像をダウンロードすることもできます。「Artifacts」タブは、https://circleci.com/ja/ からGitHubのアカウントでログインしないと表示されないようです。
 
 ![image](https://user-images.githubusercontent.com/36184621/68778998-495e1980-0677-11ea-85ef-354217320326.png)
