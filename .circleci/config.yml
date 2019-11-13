@@ -10,7 +10,7 @@ jobs:
           environment:
             TZ: Asia/Tokyo
           command: |
-            apt install ocaml
+            sudo apt install ocaml
             bash setup.sh
             bash base_test.sh
           no_output_timout: 1h
