@@ -12,8 +12,10 @@ jobs:
           command: |
             sudo apt install ocaml
             bash setup.sh
+      - run:
+          command: |
             bash base_test.sh
-          no_output_timout: 1h
+          # no_output_timout: 1h
       - store_artifacts:
           path: ~/rytr_test/simulator/base.ppm
       - store_artifacts:
