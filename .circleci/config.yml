@@ -13,9 +13,13 @@ jobs:
             sudo apt install ocaml
             bash setup.sh
       - run:
+          name: base.sld のテスト
           command: |
             bash base_test.sh
-          # no_output_timout: 1h
+      - run:
+          name: contest.sld のテスト
+          command: |
+            bash contest_test.sh
       - store_artifacts:
           path: ~/rytr_test/simulator/base.ppm
       - store_artifacts:
