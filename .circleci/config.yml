@@ -21,6 +21,14 @@ jobs:
       - store_artifacts:
           path: ~/rytr_test/simulator/base.ppm
       - run:
+          name: contest.sld のテスト
+          command: |
+            cd simulator
+            ./sim -t rytl.bin -dt sld/contest.sld -ob contest.ppm -st setup
+          no_output_timeout: 2h
+      - store_artifacts:
+          path: ~/rytr_test/simulator/contest.ppm
+      - run:
           name: candy.sld のテスト
           command: |
             cd simulator
@@ -44,14 +52,6 @@ jobs:
           no_output_timeout: 2h
       - store_artifacts:
           path: ~/rytr_test/simulator/charhan2.ppm
-      - run:
-          name: contest.sld のテスト
-          command: |
-            cd simulator
-            ./sim -t rytl.bin -dt sld/contest.sld -ob contest.ppm -st setup
-          no_output_timeout: 2h
-      - store_artifacts:
-          path: ~/rytr_test/simulator/contest.ppm
       - run:
           name: contest2.sld のテスト
           command: |
