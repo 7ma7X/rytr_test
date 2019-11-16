@@ -16,8 +16,7 @@ cd ..
 
 # Setup Simulator
 git clone https://github.com/cpuex-19-6/simulator
-cp base.sld simulator/base.sld
-cp contest.sld simulator/contest.sld
+cp -r sld/ simulator/sld 
 cp setup simulator/setup
 cp assembler/rytl.bin simulator/rytl.bin
 cd simulator
