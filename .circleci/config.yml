@@ -12,14 +12,14 @@ jobs:
           command: |
             sudo apt install ocaml
             bash install.sh
-      - run:
-          name: base.sld のテスト
-          command: |
-            cd simulator
-            ./sim -t rytl.bin -dt sld/base.sld -ob base.ppm -st setup
-          no_output_timeout: 2h
-      - store_artifacts:
-          path: ~/rytr_test/simulator/base.ppm
+#      - run:
+#          name: base.sld のテスト
+#          command: |
+#            cd simulator
+#            ./sim -t rytl.bin -dt sld/base.sld -ob base.ppm -st setup
+#          no_output_timeout: 2h
+#      - store_artifacts:
+#          path: ~/rytr_test/simulator/base.ppm
       - run:
           name: contest.sld のテスト
           command: |
@@ -28,182 +28,182 @@ jobs:
           no_output_timeout: 2h
       - store_artifacts:
           path: ~/rytr_test/simulator/contest.ppm
-      - run:
-          name: candy.sld のテスト
-          command: |
-            cd simulator
-            ./sim -t rytl.bin -dt sld/candy.sld -ob candy.ppm -st setup
-          no_output_timeout: 2h
-      - store_artifacts:
-          path: ~/rytr_test/simulator/candy.ppm
-      - run:
-          name: charhan.sld のテスト
-          command: |
-            cd simulator
-            ./sim -t rytl.bin -dt sld/charhan.sld -ob charhan.ppm -st setup
-          no_output_timeout: 2h
-      - store_artifacts:
-          path: ~/rytr_test/simulator/charhan.ppm
-      - run:
-          name: charhan2.sld のテスト
-          command: |
-            cd simulator
-            ./sim -t rytl.bin -dt sld/charhan2.sld -ob charhan2.ppm -st setup
-          no_output_timeout: 2h
-      - store_artifacts:
-          path: ~/rytr_test/simulator/charhan2.ppm
-      - run:
-          name: contest2.sld のテスト
-          command: |
-            cd simulator
-            ./sim -t rytl.bin -dt sld/contest2.sld -ob contest2.ppm -st setup
-          no_output_timeout: 2h
-      - store_artifacts:
-          path: ~/rytr_test/simulator/contest2.ppm
-      - run:
-          name: ct.sld のテスト
-          command: |
-            cd simulator
-            ./sim -t rytl.bin -dt sld/ct.sld -ob ct.ppm -st setup
-          no_output_timeout: 2h
-      - store_artifacts:
-          path: ~/rytr_test/simulator/ct.ppm
-      - run:
-          name: eye.sld のテスト
-          command: |
-            cd simulator
-            ./sim -t rytl.bin -dt sld/eye.sld -ob eye.ppm -st setup
-          no_output_timeout: 2h
-      - store_artifacts:
-          path: ~/rytr_test/simulator/eye.ppm
-      - run:
-          name: hoe.sld のテスト
-          command: |
-            cd simulator
-            ./sim -t rytl.bin -dt sld/hoe.sld -ob hoe.ppm -st setup
-          no_output_timeout: 2h
-      - store_artifacts:
-          path: ~/rytr_test/simulator/hoe.ppm
-      - run:
-          name: hoehoe.sld のテスト
-          command: |
-            cd simulator
-            ./sim -t rytl.bin -dt sld/hoehoe.sld -ob hoehoe.ppm -st setup
-          no_output_timeout: 2h
-      - store_artifacts:
-          path: ~/rytr_test/simulator/hoehoe.ppm
-      - run:
-          name: lattice.sld のテスト
-          command: |
-            cd simulator
-            ./sim -t rytl.bin -dt sld/lattice.sld -ob lattice.ppm -st setup
-          no_output_timeout: 2h
-      - store_artifacts:
-          path: ~/rytr_test/simulator/lattice.ppm
-      - run:
-          name: lattice2.sld のテスト
-          command: |
-            cd simulator
-            ./sim -t rytl.bin -dt sld/lattice2.sld -ob lattice2.ppm -st setup
-          no_output_timeout: 2h
-      - store_artifacts:
-          path: ~/rytr_test/simulator/lattice2.ppm
-      - run:
-          name: noe.sld のテスト
-          command: |
-            cd simulator
-            ./sim -t rytl.bin -dt sld/noe.sld -ob noe.ppm -st setup
-          no_output_timeout: 2h
-      - store_artifacts:
-          path: ~/rytr_test/simulator/noe.ppm
-      - run:
-          name: piero1.sld のテスト
-          command: |
-            cd simulator
-            ./sim -t rytl.bin -dt sld/piero1.sld -ob piero1.ppm -st setup
-          no_output_timeout: 2h
-      - store_artifacts:
-          path: ~/rytr_test/simulator/piero1.ppm
-      - run:
-          name: pika.sld のテスト
-          command: |
-            cd simulator
-            ./sim -t rytl.bin -dt sld/pika.sld -ob pika.ppm -st setup
-          no_output_timeout: 2h
-      - store_artifacts:
-          path: ~/rytr_test/simulator/pika.ppm
-      - run:
-          name: rot.sld のテスト
-          command: |
-            cd simulator
-            ./sim -t rytl.bin -dt sld/rot.sld -ob rot.ppm -st setup
-          no_output_timeout: 2h
-      - store_artifacts:
-          path: ~/rytr_test/simulator/rot.ppm
-      - run:
-          name: shuttle.sld のテスト
-          command: |
-            cd simulator
-            ./sim -t rytl.bin -dt sld/shuttle.sld -ob shuttle.ppm -st setup
-          no_output_timeout: 2h
-      - store_artifacts:
-          path: ~/rytr_test/simulator/shuttle.ppm
-      - run:
-          name: ss20-2.sld のテスト
-          command: |
-            cd simulator
-            ./sim -t rytl.bin -dt sld/ss20-2.sld -ob ss20-2.ppm -st setup
-          no_output_timeout: 2h
-      - store_artifacts:
-          path: ~/rytr_test/simulator/ss20-2.ppm
-      - run:
-          name: ss20.sld のテスト
-          command: |
-            cd simulator
-            ./sim -t rytl.bin -dt sld/ss20.sld -ob ss20.ppm -st setup
-          no_output_timeout: 2h
-      - store_artifacts:
-          path: ~/rytr_test/simulator/ss20.ppm
-      - run:
-          name: ss20.tmp.sld のテスト
-          command: |
-            cd simulator
-            ./sim -t rytl.bin -dt sld/ss20.tmp.sld -ob ss20.tmp.ppm -st setup
-          no_output_timeout: 2h
-      - store_artifacts:
-          path: ~/rytr_test/simulator/ss20.tmp.ppm
-      - run:
-          name: ss20.tmp2.sld のテスト
-          command: |
-            cd simulator
-            ./sim -t rytl.bin -dt sld/ss20.tmp2.sld -ob ss20.tmp2.ppm -st setup
-          no_output_timeout: 2h
-      - store_artifacts:
-          path: ~/rytr_test/simulator/ss20.tmp2.ppm
-      - run:
-          name: temp.sld のテスト
-          command: |
-            cd simulator
-            ./sim -t rytl.bin -dt sld/temp.sld -ob temp.ppm -st setup
-          no_output_timeout: 2h
-      - store_artifacts:
-          path: ~/rytr_test/simulator/temp.ppm
-      - run:
-          name: textest.sld のテスト
-          command: |
-            cd simulator
-            ./sim -t rytl.bin -dt sld/textest.sld -ob textest.ppm -st setup
-          no_output_timeout: 2h
-      - store_artifacts:
-          path: ~/rytr_test/simulator/textest.ppm
-      - run:
-          name: tron.sld のテスト
-          command: |
-            cd simulator
-            ./sim -t rytl.bin -dt sld/tron.sld -ob tron.ppm -st setup
-          no_output_timeout: 2h
-      - store_artifacts:
-          path: ~/rytr_test/simulator/tron.ppm
+#      - run:
+#          name: candy.sld のテスト
+#          command: |
+#            cd simulator
+#            ./sim -t rytl.bin -dt sld/candy.sld -ob candy.ppm -st setup
+#          no_output_timeout: 2h
+#      - store_artifacts:
+#          path: ~/rytr_test/simulator/candy.ppm
+#      - run:
+#          name: charhan.sld のテスト
+#          command: |
+#            cd simulator
+#            ./sim -t rytl.bin -dt sld/charhan.sld -ob charhan.ppm -st setup
+#          no_output_timeout: 2h
+#      - store_artifacts:
+#          path: ~/rytr_test/simulator/charhan.ppm
+#      - run:
+#          name: charhan2.sld のテスト
+#          command: |
+#            cd simulator
+#            ./sim -t rytl.bin -dt sld/charhan2.sld -ob charhan2.ppm -st setup
+#          no_output_timeout: 2h
+#      - store_artifacts:
+#          path: ~/rytr_test/simulator/charhan2.ppm
+#      - run:
+#          name: contest2.sld のテスト
+#          command: |
+#            cd simulator
+#            ./sim -t rytl.bin -dt sld/contest2.sld -ob contest2.ppm -st setup
+#          no_output_timeout: 2h
+#      - store_artifacts:
+#          path: ~/rytr_test/simulator/contest2.ppm
+#      - run:
+#          name: ct.sld のテスト
+#          command: |
+#            cd simulator
+#            ./sim -t rytl.bin -dt sld/ct.sld -ob ct.ppm -st setup
+#          no_output_timeout: 2h
+#      - store_artifacts:
+#          path: ~/rytr_test/simulator/ct.ppm
+#      - run:
+#          name: eye.sld のテスト
+#          command: |
+#            cd simulator
+#            ./sim -t rytl.bin -dt sld/eye.sld -ob eye.ppm -st setup
+#          no_output_timeout: 2h
+#      - store_artifacts:
+#          path: ~/rytr_test/simulator/eye.ppm
+#      - run:
+#          name: hoe.sld のテスト
+#          command: |
+#            cd simulator
+#            ./sim -t rytl.bin -dt sld/hoe.sld -ob hoe.ppm -st setup
+#          no_output_timeout: 2h
+#      - store_artifacts:
+#          path: ~/rytr_test/simulator/hoe.ppm
+#      - run:
+#          name: hoehoe.sld のテスト
+#          command: |
+#            cd simulator
+#            ./sim -t rytl.bin -dt sld/hoehoe.sld -ob hoehoe.ppm -st setup
+#          no_output_timeout: 2h
+#      - store_artifacts:
+#          path: ~/rytr_test/simulator/hoehoe.ppm
+#      - run:
+#          name: lattice.sld のテスト
+#          command: |
+#            cd simulator
+#            ./sim -t rytl.bin -dt sld/lattice.sld -ob lattice.ppm -st setup
+#          no_output_timeout: 2h
+#      - store_artifacts:
+#          path: ~/rytr_test/simulator/lattice.ppm
+#      - run:
+#          name: lattice2.sld のテスト
+#          command: |
+#            cd simulator
+#            ./sim -t rytl.bin -dt sld/lattice2.sld -ob lattice2.ppm -st setup
+#          no_output_timeout: 2h
+#      - store_artifacts:
+#          path: ~/rytr_test/simulator/lattice2.ppm
+#      - run:
+#          name: noe.sld のテスト
+#          command: |
+#            cd simulator
+#            ./sim -t rytl.bin -dt sld/noe.sld -ob noe.ppm -st setup
+#          no_output_timeout: 2h
+#      - store_artifacts:
+#          path: ~/rytr_test/simulator/noe.ppm
+#      - run:
+#          name: piero1.sld のテスト
+#          command: |
+#            cd simulator
+#            ./sim -t rytl.bin -dt sld/piero1.sld -ob piero1.ppm -st setup
+#          no_output_timeout: 2h
+#      - store_artifacts:
+#          path: ~/rytr_test/simulator/piero1.ppm
+#      - run:
+#          name: pika.sld のテスト
+#          command: |
+#            cd simulator
+#            ./sim -t rytl.bin -dt sld/pika.sld -ob pika.ppm -st setup
+#          no_output_timeout: 2h
+#      - store_artifacts:
+#          path: ~/rytr_test/simulator/pika.ppm
+#      - run:
+#          name: rot.sld のテスト
+#          command: |
+#            cd simulator
+#            ./sim -t rytl.bin -dt sld/rot.sld -ob rot.ppm -st setup
+#          no_output_timeout: 2h
+#      - store_artifacts:
+#          path: ~/rytr_test/simulator/rot.ppm
+#      - run:
+#          name: shuttle.sld のテスト
+#          command: |
+#            cd simulator
+#            ./sim -t rytl.bin -dt sld/shuttle.sld -ob shuttle.ppm -st setup
+#          no_output_timeout: 2h
+#      - store_artifacts:
+#          path: ~/rytr_test/simulator/shuttle.ppm
+#      - run:
+#          name: ss20-2.sld のテスト
+#          command: |
+#            cd simulator
+#            ./sim -t rytl.bin -dt sld/ss20-2.sld -ob ss20-2.ppm -st setup
+#          no_output_timeout: 2h
+#      - store_artifacts:
+#          path: ~/rytr_test/simulator/ss20-2.ppm
+#      - run:
+#          name: ss20.sld のテスト
+#          command: |
+#            cd simulator
+#            ./sim -t rytl.bin -dt sld/ss20.sld -ob ss20.ppm -st setup
+#          no_output_timeout: 2h
+#      - store_artifacts:
+#          path: ~/rytr_test/simulator/ss20.ppm
+#      - run:
+#          name: ss20.tmp.sld のテスト
+#          command: |
+#            cd simulator
+#            ./sim -t rytl.bin -dt sld/ss20.tmp.sld -ob ss20.tmp.ppm -st setup
+#          no_output_timeout: 2h
+#      - store_artifacts:
+#          path: ~/rytr_test/simulator/ss20.tmp.ppm
+#      - run:
+#          name: ss20.tmp2.sld のテスト
+#          command: |
+#            cd simulator
+#            ./sim -t rytl.bin -dt sld/ss20.tmp2.sld -ob ss20.tmp2.ppm -st setup
+#          no_output_timeout: 2h
+#      - store_artifacts:
+#          path: ~/rytr_test/simulator/ss20.tmp2.ppm
+#      - run:
+#          name: temp.sld のテスト
+#          command: |
+#            cd simulator
+#            ./sim -t rytl.bin -dt sld/temp.sld -ob temp.ppm -st setup
+#          no_output_timeout: 2h
+#      - store_artifacts:
+#          path: ~/rytr_test/simulator/temp.ppm
+#      - run:
+#          name: textest.sld のテスト
+#          command: |
+#            cd simulator
+#            ./sim -t rytl.bin -dt sld/textest.sld -ob textest.ppm -st setup
+#          no_output_timeout: 2h
+#      - store_artifacts:
+#          path: ~/rytr_test/simulator/textest.ppm
+#      - run:
+#          name: tron.sld のテスト
+#          command: |
+#            cd simulator
+#            ./sim -t rytl.bin -dt sld/tron.sld -ob tron.ppm -st setup
+#          no_output_timeout: 2h
+#      - store_artifacts:
+#          path: ~/rytr_test/simulator/tron.ppm
 workflows:
   version: 2
   normal_workflow:
