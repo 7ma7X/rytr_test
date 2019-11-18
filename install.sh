@@ -1,7 +1,7 @@
 # Setup Compiler
 git clone https://github.com/cpuex-19-6/Compiler.git
 cd Compiler
-make min-rt
+make min-rt128
 
 cd ..
 
