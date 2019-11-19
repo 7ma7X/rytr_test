@@ -1,13 +1,13 @@
 # Setup Compiler
 git clone https://github.com/cpuex-19-6/Compiler.git
 cd Compiler
-make min-rt128
+make min-rt
 
 cd ..
 
 # Setup Assembler
 git clone https://github.com/cpuex-19-6/assembler.git
-cp Compiler/raytrace128.s assembler/rytl.s
+cp Compiler/raytrace.s assembler/rytl.s
 cd assembler
 make
 ./asm rytl.s rytl.bin
