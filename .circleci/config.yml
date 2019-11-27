@@ -13,6 +13,12 @@ jobs:
             sudo apt install ocaml
             bash install.sh
       - run:
+          name: contest.sld (128*128) のテスト
+          command: |
+            cd simulator
+            ./sim -t rytl128.bin -dt sld/contest.sld -ob contest128.ppm -st setup
+          no_output_timeout: 2h
+      - run:
           name: contest.sld のテスト
           command: |
             cd simulator
