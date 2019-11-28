@@ -20,6 +20,10 @@ jobs:
           no_output_timeout: 2h
       - store_artifacts:
           path: ~/rytr_test/simulator/contest128.ppm
+      - store_artifacts:
+          path: ~/rytr_test/Compiler/raytrace128.s
+      - store_artifacts:
+          path: ~/rytr_test/assembler/rytl128.bin
       - run:
           name: contest.sld のテスト
           command: |
