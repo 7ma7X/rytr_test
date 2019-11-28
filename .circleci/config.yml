@@ -18,6 +18,8 @@ jobs:
             cd simulator
             ./sim -t rytl128.bin -dt sld/contest.sld -ob contest128.ppm -st setup
           no_output_timeout: 2h
+      - store_artifacts:
+          path: ~/rytr_test/simulator/contest128.ppm
       - run:
           name: contest.sld のテスト
           command: |
