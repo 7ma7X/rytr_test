@@ -24,18 +24,6 @@ jobs:
           path: ~/rytr_test/Compiler/raytrace128.s
       - store_artifacts:
           path: ~/rytr_test/assembler/rytl128.bin
-      - run:
-          name: contest.sld のテスト
-          command: |
-            cd simulator
-            ./sim -t rytl.bin -dt sld/contest.sld -ob contest.ppm -st setup
-          no_output_timeout: 2h
-      - store_artifacts:
-          path: ~/rytr_test/simulator/contest.ppm
-      - store_artifacts:
-          path: ~/rytr_test/Compiler/raytrace.s
-      - store_artifacts:
-          path: ~/rytr_test/assembler/rytl.bin
 workflows:
   version: 2
   normal_workflow:
