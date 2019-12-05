@@ -24,6 +24,10 @@ jobs:
           path: ~/rytr_test/Compiler/raytrace128.s
       - store_artifacts:
           path: ~/rytr_test/assembler/rytl128.bin
+      - run:
+          name: 実機との比較
+          command: |
+            diff ~/rytr_test/simulator/contest128.ppm ~/rytr_test/zikki.ppm
 workflows:
   version: 2
   normal_workflow:
